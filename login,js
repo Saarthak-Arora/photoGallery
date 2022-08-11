@@ -1,0 +1,159 @@
+var store1 = localStorage.getItem("store1");
+var obj = {
+    store1: "no",
+}
+
+
+
+
+var l = 0;
+
+
+function chkmail() {
+    var rese = "invalid";
+    var n = document.getElementById("em").value;
+    var c = 0;
+    for (var i = 0; i < n.length; i++) {
+        if (n.includes(".edu.in") || n.includes("@gmail.com")) {
+            c++;
+            break;
+        }
+
+    }
+    if (c == 1) {
+        rese = "valid";
+        this.l = this.l + 1;
+        document.getElementById("rese").innerHTML = rese;
+    } else {
+        document.getElementById("rese").innerHTML = rese;
+    }
+
+}
+
+
+
+
+
+function login() {
+
+    var p = document.getElementById("pa").value;
+
+    if (this.l > 0 && p.length>=8 && (p.includes("!") || p.includes("@") || p.includes("#") || p.includes("$") || p.includes("%") || p.includes("*") || p.includes("&"))){
+        alert("Successfully login")
+        console.log(obj);
+        console.log(obj.store1);
+        (obj.store1 = "yes");
+        console.log(obj);
+        localStorage.setItem("store1", "yes");
+        console.log(store1)
+
+    } else {
+        alert("Invalid email or password");
+    }
+}
+
+var l2 = 0;
+
+function chkmail2() {
+    var rese = "invalid";
+    var n = document.getElementById("em2").value;
+    var c = 0;
+    for (var i = 0; i < n.length; i++) {
+        if (n.includes(".edu.in") || n.includes("@gmail.com")) {
+            c++;
+            break;
+        }
+    }
+    if (c == 1) {
+        rese = "valid";
+        this.l2 = this.l2 + 1;
+        document.getElementById("rese2").innerHTML = rese;
+    } else {
+        document.getElementById("rese2").innerHTML = rese;
+    }
+
+}
+
+$(document).ready(function () {
+    $("#send").click(function () {
+        // var r = document.getElementById("rese2").value;
+        if (l2 > 0) {
+            $("#main3").show();
+            $("#main2").hide();
+        } else {
+
+            alert("Invalid email");
+        }
+
+    })
+});
+
+
+
+
+function resend() {
+    alert("new code is sended")
+}
+globalThis = 0;
+
+$(document).ready(function () {
+    $("#submit").click(function () {
+        var v = document.getElementById("vcod").value;
+        if (v.length == 4) {
+            alert("Successfully login");
+            globalThis = 1;
+
+            console.log(obj);
+            console.log(obj.store1);
+
+            (obj.store1 = "yes")
+            localStorage.setItem("store1", "yes");
+            console.log(store1)
+        } else {
+            alert("Invalid code");
+        }
+    })
+})
+
+
+
+
+
+
+
+
+$(document).ready(function () {
+    $("#fp").click(function () {
+        $("#main").hide();
+        $("#main2").show();
+    })
+})
+
+
+
+
+$(document).ready(function () {
+    $("#back").click(function () {
+        $("#main").show();
+        $("#main2").hide();
+    })
+})
+
+
+$(document).ready(function () {
+    $("#back1").click(function () {
+        $("#main2").show();
+        $("#main3").hide();
+    })
+});
+
+
+
+
+//localStorage.setItem("storeI1","");
+function gett() {
+    if (store1 == "yes") {
+        console.log("logedin")
+
+    }
+}

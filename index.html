@@ -1,173 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--divinectorweb.com-->
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Gallery</title>
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="wrapper">
-        <h1 class="section-header">
-          <video width= "100" height="100" autoplay loop>
-            <source src="logo.mp4" type="video/mp4"> 
-          </video>
-          <nav class="nav">
-            <a class="nav-link active" aria-current="page" href="#">HOME</a>
-            <a class="nav-link" href="login.html">SIGN IN</a>
-            <a class="nav-link" href="#">SIGN OUT</a>
-          </nav>
-        </h1>
+  <div class="wrapper">
+    <h1 class="section-header">
+      <video width="100" height="100" autoplay muted loop id="vid">
+        <source src="logo.mp4" type="video/mp4">
+      </video>
+      <nav class="nav">
+        <a class="nav-link active sp" aria-current="page" href="#">
+          <h4 style="color: white; display: inline;">HOME</h4>
+        </a>
+        <a class="nav-link sp" href="#ab">
+          <h4 style="color: white; display: inline;">ABOUT US</h4>
+        </a>
+        <a class="nav-link sp" href="login.html">
+          <h4 style="color: white; display: inline;">SIGN IN</h4>
+        </a>
+      </nav>
+    </h1>
 
-        <h1 style="color: white;">PHOTO GALLERY</h1> 
-        <div class="main-content">
-            <div class="box">
-                <img src="https://via.placeholder.com/150/92c952" onclick="openI()">
-                <div class="img-text">
-                    <div class="content">
-                        <h2 class="titles"></h2>
-                    </div>
-                </div>
-            </div>
-            <div class="box">
-                <img src="https://via.placeholder.com/150/92c952" onclick="openI()">
-                <div class="img-text">
-                    <div class="content">
-                        <h2 class="titles"></h2>
-                    
-                    </div>
-                </div>
-            </div>
-            <div class="box">
-                <img src="https://via.placeholder.com/150/92c952" onclick="openI()">
-                <div class="img-text">
-                    <div class="content">
-                        <h2 class="titles">ui/ux design</h2>
-                    
-                    </div>
-                </div>
-            </div>
+    <div style="margin: 4px 4px;"> <h1 style="color: white;text-decoration:double;">PHOTO GALLERY</h1> </div>
+    
 
-            <div class="box">
-                <img src="https://via.placeholder.com/150/92c952" onclick="openI()">
-                <div class="img-text">
-                    <div class="content">
-                        <h2 class="titles">Photography</h2>
-                    
-                    </div>
-                </div>
-            </div>
-            <div class="box">
-                <img src="https://via.placeholder.com/150/92c952" onclick="openI()">
-                <div class="img-text">
-                    <div class="content">
-                        <h2 class="titles">crafting</h2>
-                    
-                    </div>
-                </div>
-            </div>
-            <div class="box">
-              <img src="https://via.placeholder.com/150/92c952" onclick="openI()">
-              <div class="img-text">
-                  <div class="content">
-                      <h2 class="titles">crafting</h2>
-                  
-                  </div>
-              </div>
-          </div>
-          <div class="box">
-            <img src="https://via.placeholder.com/150/92c952" onclick="openI()">
-            <div class="img-text">
-                <div class="content">
-                    <h2 class="titles">crafting</h2>
-                
-                </div>
-            </div>
-        </div>
-        <div class="box">
-          <img src="https://via.placeholder.com/150/92c952" onclick="openI()">
-          <div class="img-text">
-              <div class="content">
-                  <h2 class="titles">crafting</h2>
-              
-              </div>
-          </div>
-      </div>
-            <div class="box">
-                <img src="https://via.placeholder.com/150/92c952" onclick="openI()">
-                <div class="img-text">
-                    <div class="content">
-                        <h2 class="titles"></h2>
-                    
-                    </div>
-                </div>
-            </div>
-        </div>
+   <div >
+      <button class="btn">
+        <h4  onclick="newI()">NEXT</h4>
+      </button>
+      <button class="btn" >
+        <h4  onclick="lessI()">PREV</h4>
+      </button>
     </div>
+  
+    
+    
+    <div class="main-content">
 
-    <footer style="display: block;">
-      <div class="footer-content">
-          <h3>Developer</h3>
-          <p>Explore</p>
-          <ul class="socials">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-              <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-          </ul>
+
+      <a href="#tofull" id="1" onclick="openI(this)">  <div class="box">
+       <img src="" >
+        <div class="img-text">
+          <div class="content">
+            <h2 class="titles"></h2>
+          </div>
+        </div>
       </div>
-      <div class="footer-bottom">
-                  <div class="footer-menu">
-                    <ul class="f-menu">
-                      <li><a href="">Home</a></li>
-                      <li><a href="">Favrouite</a></li>
-                    </ul>
-                </div>
+      </a>
+
+
+      <a href="#tofull" id="2" onclick="openI(this)">  <div class="box">
+        <img src="" >
+         <div class="img-text">
+           <div class="content">
+             <h2 class="titles"></h2>
+           </div>
+         </div>
+       </div>
+       </a>
+
+
+      <a href="#tofull" id="3" onclick="openI(this)">  <div class="box">
+       <img src="" >
+        <div class="img-text">
+          <div class="content">
+            <h2 class="titles"></h2>
+          </div>
+        </div>
       </div>
+      </a>
 
-  </footer>
+
+      <a href="#tofull" id="4" onclick="openI(this)">  <div class="box">
+       <img src="" >
+        <div class="img-text">
+          <div class="content">
+            <h2 class="titles"></h2>
+          </div>
+        </div>
+      </div>
+      </a>
 
 
- 
+      <a href="#tofull" id="5" onclick="openI(this)">  <div class="box">
+       <img src="" >
+        <div class="img-text">
+          <div class="content">
+            <h2 class="titles"></h2>
+          </div>
+        </div>
+      </div>
+      </a>
+
+
+      <a href="#tofull" id="6" onclick="openI(this)">  <div class="box">
+       <img src="" >
+        <div class="img-text">
+          <div class="content">
+            <h2 class="titles"></h2>
+          </div>
+        </div>
+      </div>
+      </a>
+
+
+      <a href="#tofull" id="7" onclick="openI(this)">  <div class="box">
+       <img src="" onclick="openI(this)">
+        <div class="img-text">
+          <div class="content">
+            <h2 class="titles"></h2>
+          </div>
+        </div>
+      </div>
+      </a>
+
+
+      <a href="#tofull" id="8" onclick="openI(this)">  <div class="box">
+       <img src="" onclick="openI(this)">
+        <div class="img-text">
+          <div class="content">
+            <h2 class="titles"></h2>
+          </div>
+        </div>
+      </div>
+      </a>
+
+
+      <a href="#tofull" id="9" onclick="openI(this)">  <div class="box">
+        <img src="" >
+         <div class="img-text">
+           <div class="content">
+             <h2 class="titles"></h2>
+           </div>
+         </div>
+       </div>
+       </a>
+
+
+        
+    
+</div>
+
+
+<div class="fullImage" id="tofull">
+  <img src="" class="img-fluid" alt="Responsive image">
+</div>
+
+
+<!-- Footer -->
+<footer class="page-footer font-small teal pt-4">
+
+  <!-- Footer Text -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase font-weight-bold addc" id="ab">ABOUT US</h5>
+        <h4 class="addc">THIS IS THE SITE WHERE YOU CAN FIND BEAUTIFULL IMAGES, FOR IMAGES U CAN CONTACT US ON 9XXXXXXXX</h4>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      
+     
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Text -->
+
+  <div class="footer-copyright text-center py-3">
+    <a href="#" style="color: white"> TO TOP</a>
+  </div>
+  
+
+</footer>
+<!-- Footer -->
+
+
+</div>
+
+
+
 
     <script>
-      window.addEventListener('load', (event) => {
-           var xhr = new XMLHttpRequest();
-           xhr.onreadystatechange = function(){
-              if(this.readyState == 4 && this.status == 200){
-                console.log(this.responseText); // this is in string 
-                var data = this.responseText;
-                var dataobj = JSON.parse(data); // this is in the form of object 
-                var imgsrc = new Array();
-                var titl = new Array();
+     document.getElementById('vid').play();
+      var p = 0;
+      var imgsrc = new Array();
+      var titl = new Array();
+      var b = new Array();
+     
+      var node = document.getElementsByTagName('img');
+      var tit = document.getElementsByClassName('titles');
+      var bi = document.getElementsByClassName('img-fluid');
 
-                for(var i = 0;i<dataobj.length;i++){
-                  imgsrc[i] = dataobj[i].thumbnailUrl;
-                  titl[i] = dataobj[i].title;
-                }
-
-                var node = document.getElementsByTagName('img');
-                var tit = document.getElementsByClassName('titles');
+      
 
 
-               for(var i =0 ;i < node.length;i++){
-                   node[i].src = imgsrc[i];
-                   tit[i].innerHTML = titl[i];
-               }
-                
-              }
-           }
-           xhr.open("GET","https://jsonplaceholder.typicode.com/photos?utm_source=Mailerlite&utm_medium=E-mail&utm_campaign=Test%20Series&utm_term%27%20+2%20%27=2022-08-09");
-           xhr.send();
+      function lessI() {
+            if (p >= 8) {
+              p = p - 8;
+            }
+
+            var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+           // console.log(this.responseText); // this is in string 
+            var data = this.responseText;
+            var dataobj = JSON.parse(data); // this is in the form of object 
+            
+          }
+
+          var k = 0;
+            for (var i = p; i <= p+9; i++) {
+              imgsrc[k] = dataobj[i].thumbnailUrl;
+              titl[k] = dataobj[i].title;
+              b[k] = dataobj[i].url;
+              k++;
+            }
+
+            bi[0].src = b[0];
+
+            for (var i = 0; i <= 9; i++) {
+              node[i].src = imgsrc[i];
+              tit[i].innerHTML = titl[i];
+            }
+
+
+        }
+        xhr.open("GET", "https://jsonplaceholder.typicode.com/photos?utm_source=Mailerlite&utm_medium=E-mail&utm_campaign=Test%20Series&utm_term%27%20+2%20%27=2022-08-09");
+        xhr.send();
+                 
+
+    }
+        
+        
+      
+      function newI() {
+
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            //console.log(this.responseText); // this is in string 
+            var data = this.responseText;
+            var dataobj = JSON.parse(data); // this is in the form of object 
+            
+          }
+
+          var k = 0;
+            for (var i = p; i <= p+9; i++) {
+              imgsrc[k] = dataobj[i].thumbnailUrl;
+              titl[k] = dataobj[i].title;
+              b[k] = dataobj[i].url;
+              k++;
+            }
+
            
-       });
-   </script>
+            bi[0].src = b[0];
+            for (var i = 0; i <= 9; i++) {
+              node[i].src = imgsrc[i];
+              tit[i].innerHTML = titl[i];
+              p++;
+            }
 
-    
+        }
+        xhr.open("GET", "https://jsonplaceholder.typicode.com/photos?utm_source=Mailerlite&utm_medium=E-mail&utm_campaign=Test%20Series&utm_term%27%20+2%20%27=2022-08-09");
+        xhr.send();
+           
+}
+        
+
+
+      
+      window.addEventListener('load', (event) => {
+
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            //console.log(this.responseText); // this is in string 
+            var data = this.responseText;
+            var dataobj = JSON.parse(data); // this is in the form of object 
+            
+          }
+
+          var k = 0;
+            for (var i = p; i <= p+9; i++) {
+              imgsrc[k] = dataobj[i].thumbnailUrl;
+              titl[k] = dataobj[i].title;
+              b[k] = dataobj[i].url;
+              k++;
+            }
+
+            
+
+            bi[0].src = b[0];
+            for (var i = 0; i <= 9; i++) {
+              node[i].src = imgsrc[i];
+              tit[i].innerHTML = titl[i];
+              p++;
+            }
+
+        }
+        xhr.open("GET", "https://jsonplaceholder.typicode.com/photos?utm_source=Mailerlite&utm_medium=E-mail&utm_campaign=Test%20Series&utm_term%27%20+2%20%27=2022-08-09");
+        xhr.send();
+
+      });
+
+      function openI(ob){
+        var x = parseInt(ob.id);
+        bi[0].src =b[x-1];
+        
+      }
+    </script>
+
+
 </body>
+
 </html>
